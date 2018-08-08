@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/contentTextView"
+        android:layout_width="316dp"
+        android:layout_height="302dp"
+        android:layout_marginStart="4dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/picImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.712" />
+
+    <EditText
+        android:id="@+id/linkEditText"
+        android:layout_width="290dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Write link..."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/dlSiteButton"
+        android:layout_width="149dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:onClick="siteContentDownload"
+        android:text="Site Download"
+        app:layout_constraintStart_toStartOf="@+id/linkEditText"
+        app:layout_constraintTop_toBottomOf="@+id/linkEditText" />
+
+    <Button
+        android:id="@+id/dlPicButton"
+        android:layout_width="135dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:onClick="pictureContentDownload"
+        android:text="Pic Download"
+        app:layout_constraintEnd_toEndOf="@+id/linkEditText"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/dlSiteButton"
+        app:layout_constraintTop_toBottomOf="@+id/linkEditText" />
+
+    <ImageView
+        android:id="@+id/picImageView"
+        android:layout_width="330dp"
+        android:layout_height="305dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dlSiteButton"
+        app:layout_constraintVertical_bias="0.347"
+        app:srcCompat="@android:color/darker_gray" />
+
+</android.support.constraint.ConstraintLayout>
